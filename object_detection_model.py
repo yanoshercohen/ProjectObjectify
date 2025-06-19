@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Instagram-Style Object Tracking with Original Detection Algorithm
+Instagram-Style ngr.ev-inspired Object Tracking with Original Detection Algorithm
 - Modified for web integration
 """
 

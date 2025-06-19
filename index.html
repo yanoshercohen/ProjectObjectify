@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT OBJECTIFY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <canvas id="grid-canvas"></canvas>
+
+        <div class="main-container">
+            <div class="header">
+                <div class="header-content">
+                    <h1 class="title">PROJECT OBJECTIFY</h1>
+                    <div class="status-badge" id="status">READY</div>
+                </div>
+            </div>
+
+            <div class="content" id="content">
+                <!-- Upload screen (default) -->
+                <div class="screen" id="upload-screen">
+                    <div class="upload-container">
+                        <h2 class="section-title">VIDEO ANALYSIS</h2>
+                        <p class="section-subtitle">Upload video file for processing</p>
+
+                        <div class="upload-area" id="upload-area">
+                            <div class="upload-content">
+                                <div class="upload-icon">📁</div>
+                                <h3>DRAG VIDEO HERE</h3>
+                                <p>or click to select file manually</p>
+                                <div class="format-info">MP4, AVI, MOV, MKV</div>
+                                <button class="browse-btn" id="browse-btn">BROWSE FILES</button>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="video/*" style="display: none;">
+                    </div>
+                </div>
+
+                <!-- Processing screen -->
+                <div class="screen hidden" id="processing-screen">
+                    <div class="processing-container">
+                        <h2 class="section-title">PROCESSING</h2>
+                        <p class="section-subtitle" id="filename"></p>
+
+                        <div class="progress-container">
+                            <div class="progress-header">
+                                <span>PROGRESS</span>
+                                <span id="progress-percent">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                        </div>
+
+                        <div class="log-container">
+                            <h3>PROCESSING LOG</h3>
+                            <div class="log-text" id="log-text"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Complete screen -->
+                <div class="screen hidden" id="complete-screen">
+                    <div class="complete-container">
+                        <h2 class="section-title">COMPLETE</h2>
+                        <p class="section-subtitle">Processing finished successfully</p>
+
+                        <div class="video-container">
+                            <div class="video-placeholder">🎬 VIDEO PROCESSED</div>
+                            <p class="file-info" id="output-info"></p>
+                        </div>
+
+                        <div class="button-group">
+                            <button class="action-btn" id="play-btn">▶ PLAY</button>
+                            <button class="action-btn" id="download-btn">⬇ DOWNLOAD</button>
+                            <button class="action-btn" id="new-btn">🔄 PROCESS NEW</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error screen -->
+                <div class="screen hidden" id="error-screen">
+                    <div class="error-container">
+                        <div class="error-box">
+                            <h2>ERROR</h2>
+                            <p id="error-message"></p>
+                            <button class="action-btn" id="restart-btn">RESTART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

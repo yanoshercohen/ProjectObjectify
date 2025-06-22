@@ -24,11 +24,11 @@ https://github.com/user-attachments/assets/2e444a55-8ef7-47bc-95ac-fb55de481d24
 - Ultralytics YOLOv8 (`ultralytics`)
 - NumPy
 - pillow
-- MoviePy
+- MoviePy 1.0.3
 - Flask
 
 Install all dependencies:
-`pip install flask opencv-python numpy ultralytics moviepy pillow`
+`pip install flask opencv-python numpy ultralytics moviepy==1.0.3 pillow`
 
 ---
 
